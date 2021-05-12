@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/nazaries/static/css/main.8c4fb96d.chunk.css",
+    "main.js": "/nazaries/static/js/main.82959eaf.chunk.js",
+    "main.js.map": "/nazaries/static/js/main.82959eaf.chunk.js.map",
+    "runtime-main.js": "/nazaries/static/js/runtime-main.61293de6.js",
+    "runtime-main.js.map": "/nazaries/static/js/runtime-main.61293de6.js.map",
+    "static/css/2.54787924.chunk.css": "/nazaries/static/css/2.54787924.chunk.css",
+    "static/js/2.0db488a7.chunk.js": "/nazaries/static/js/2.0db488a7.chunk.js",
+    "static/js/2.0db488a7.chunk.js.map": "/nazaries/static/js/2.0db488a7.chunk.js.map",
+    "index.html": "/nazaries/index.html",
+    "static/css/2.54787924.chunk.css.map": "/nazaries/static/css/2.54787924.chunk.css.map",
+    "static/css/main.8c4fb96d.chunk.css.map": "/nazaries/static/css/main.8c4fb96d.chunk.css.map",
+    "static/js/2.0db488a7.chunk.js.LICENSE.txt": "/nazaries/static/js/2.0db488a7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.61293de6.js",
+    "static/css/2.54787924.chunk.css",
+    "static/js/2.0db488a7.chunk.js",
+    "static/css/main.8c4fb96d.chunk.css",
+    "static/js/main.82959eaf.chunk.js"
+  ]
+}
