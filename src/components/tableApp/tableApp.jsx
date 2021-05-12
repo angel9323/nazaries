@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import './tableApp.css';
 import { FormattedMessage } from 'react-intl';
-import { Table, Dropdown, Button, Menu } from 'antd';
+import { Table, Dropdown, Button, Menu, Pagination } from 'antd';
 import { resetFilters, setDataDB } from '../../actions/actions';
 import { DownOutlined } from '@ant-design/icons';
 
@@ -11,8 +11,10 @@ const TableApp = (props) => {
 
     const [sortedInfo, setSortedInfor] = useState({});
     const dispatch = useDispatch();
+    const pagTest = <Pagination pageSize={4} showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`} />
     const pagination = {
-        pageSize: 4
+        pageSize: 4,
+        showTotal: (total, range) => (`${range[0]}-${range[1]} of ${total} documents`)
     }
 
     useEffect(() => {
@@ -28,30 +30,6 @@ const TableApp = (props) => {
     const handleChange = (pagination, filters, sorter) => {
         console.log('Various parameters', pagination, filters, sorter);
         setSortedInfor(sorter);
-        // this.setState({
-        //     filteredInfo: filters,
-        //     sortedInfo: sorter,
-        // });
-    };
-
-    const clearFilters = () => {
-        // this.setState({ filteredInfo: null });
-    };
-
-    const clearAll = () => {
-        // this.setState({
-        //     filteredInfo: null,
-        //     sortedInfo: null,
-        // });
-    };
-
-    const setAgeSort = () => {
-        // this.setState({
-        //     sortedInfo: {
-        //         order: 'descend',
-        //         columnKey: 'age',
-        //     },
-        // });
     };
 
     const onClickReset = () => {
@@ -63,8 +41,6 @@ const TableApp = (props) => {
             title: <FormattedMessage id="channel" />,
             dataIndex: 'channel',
             key: 'channel',
-            sorter: (a, b) => a.channel.length - b.channel.length,
-            sortOrder: sortedInfo.columnKey === 'channel' && sortedInfo.order,
             ellipsis: true,
             width: 100,
         },
@@ -72,8 +48,6 @@ const TableApp = (props) => {
             title: <FormattedMessage id="documentName" />,
             dataIndex: 'documentName',
             key: 'documentName',
-            sorter: (a, b) => a.documentName - b.documentName,
-            sortOrder: sortedInfo.columnKey === 'documentName' && sortedInfo.order,
             ellipsis: true,
             render: (text) => <a>{text}</a>,
         },
@@ -81,7 +55,11 @@ const TableApp = (props) => {
             title: <FormattedMessage id="group" />,
             dataIndex: 'group',
             key: 'group',
-            sorter: (a, b) => a.group.length - b.group.length,
+            sorter: (a, b) => {
+                if (a.group < b.group) return -1
+                if (a.group > b.group) return 1
+                return 0
+            },
             sortOrder: sortedInfo.columnKey === 'group' && sortedInfo.order,
             ellipsis: true,
             render: (text) => <a>{text}</a>,
@@ -91,7 +69,11 @@ const TableApp = (props) => {
             title: <FormattedMessage id="status" />,
             dataIndex: 'status',
             key: 'status',
-            sorter: (a, b) => a.status.length - b.status.length,
+            sorter: (a, b) => {
+                if (a.status < b.status) return -1
+                if (a.status > b.status) return 1
+                return 0
+            },
             sortOrder: sortedInfo.columnKey === 'status' && sortedInfo.order,
             ellipsis: true,
             width: 200,
@@ -100,7 +82,11 @@ const TableApp = (props) => {
             title: <FormattedMessage id="dateModified" />,
             dataIndex: 'dateModified',
             key: 'dateModified',
-            sorter: (a, b) => a.dateModified.length - b.dateModified.length,
+            sorter: (a, b) => {
+                if (a.dateModified < b.dateModified) return -1
+                if (a.dateModified > b.dateModified) return 1
+                return 0
+            },
             sortOrder: sortedInfo.columnKey === 'dateModified' && sortedInfo.order,
             ellipsis: true,
             width: 200,
@@ -109,7 +95,11 @@ const TableApp = (props) => {
             title: <FormattedMessage id="type" />,
             dataIndex: 'type',
             key: 'type',
-            sorter: (a, b) => a.type.length - b.type.length,
+            sorter: (a, b) => {
+                if (a.type < b.type) return -1
+                if (a.type > b.type) return 1
+                return 0
+            },
             sortOrder: sortedInfo.columnKey === 'type' && sortedInfo.order,
             ellipsis: true,
             width: 200,
@@ -118,8 +108,6 @@ const TableApp = (props) => {
             title: <FormattedMessage id="adress" />,
             dataIndex: 'adress',
             key: 'adress',
-            sorter: (a, b) => a.adress.length - b.adress.length,
-            sortOrder: sortedInfo.columnKey === 'adress' && sortedInfo.order,
             ellipsis: true,
             render: (text) => <a>{text}</a>,
             width: 200,

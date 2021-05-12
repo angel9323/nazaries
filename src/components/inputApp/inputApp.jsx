@@ -17,6 +17,7 @@ const InputApp = (props) => {
 
     const onClickAdd = () => {
         dispatch(addDocument(nameDoc));
+        setNameDoc("");
     }
 
     return (
