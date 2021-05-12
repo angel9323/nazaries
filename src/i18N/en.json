@@ -1,0 +1,23 @@
+{
+    "filters": "Filters",
+    "received": "Received",
+    "printed": "Printed",
+    "folded": "Folded",
+    "sorted": "Sorted",
+    "delivered": "Delivered",
+    "adress": "Adress",
+    "date": "Date",
+    "status": "Status",
+    "team": "Team",
+    "group": "Group",
+    "dateRange": "Date Range",
+    "documentBrowser": "Document Browser",
+    "docName": "Doc. Name:",
+    "addNew": "Add New",
+    "channel": "Channel",
+    "documentName": "Document Name",
+    "dateModified": "Date modified",
+    "type": "Type",
+    "dashboard": "Dashboard",
+    "reset": "Reset"
+}

@@ -1,0 +1,14 @@
+@import '~antd/dist/antd.css';
+
+.div-documentBrowser-text{
+  height: 35px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 24px;
+  font-size: 16px;
+}
+
+.breadcrumb-style{
+  text-align: left;
+  padding-left: 24px;
+}

@@ -1,0 +1,11 @@
+.sider{
+    background: white !important;
+}
+
+.div-filters-text{
+    height: 32px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 24px;
+    font-size: 16px;
+}

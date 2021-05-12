@@ -1,0 +1,8 @@
+@import '~antd/dist/antd.css';
+
+
+
+.site-layout .site-layout-background {
+  background: #fff;
+  height: 77px;
+}

@@ -1,0 +1,23 @@
+{
+    "filters": "Filtros",
+    "received": "Recibido",
+    "printed": "Impreso",
+    "folded": "Doblado",
+    "sorted": "Ordenado",
+    "delivered": "Entregado",
+    "adress": "Dirección",
+    "date": "Fecha",
+    "status": "Estado",
+    "team": "Equipo",
+    "group": "Grupo",
+    "dateRange": "Rango Fecha",
+    "documentBrowser": "Buscador de Documentos",
+    "docName": "Nombre Doc.:",
+    "addNew": "Añadir",
+    "channel": "Canal",
+    "documentName": "Nombre Documento",
+    "dateModified": "Fecha modificación",
+    "type": "Tipo",
+    "dashboard": "Dashboard",
+    "reset": "Resetear"
+}
