@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './inputApp.css';
-import { Input, Button, Alert } from 'antd';
+import { Input, Button } from 'antd';
 import { FormattedMessage } from 'react-intl';
 import { PlusOutlined } from '@ant-design/icons';
 import { addDocument } from '../../actions/actions';
@@ -27,7 +27,7 @@ const InputApp = (props) => {
             </span>
             <Input className="inputApp-style" value={nameDoc} onChange={onChangeValue} />
             <Button className="buttonAddNew-style" type="primary" icon={<PlusOutlined />}
-                onClick={onClickAdd} disabled={nameDoc.length == 0} >
+                onClick={onClickAdd} disabled={nameDoc.length === 0} >
                 <FormattedMessage id="addNew" />
             </Button >
         </>

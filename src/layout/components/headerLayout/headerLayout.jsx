@@ -11,8 +11,12 @@ const HeaderLayout = (props) => {
     return (
         <Header className="site-layout-background" style={{ padding: 0 }}>
             <Breadcrumb className="breadcrumb-style" >
-                <BreadcrumbItem>Home</BreadcrumbItem>
-                <BreadcrumbItem>Documents</BreadcrumbItem>
+                <BreadcrumbItem>
+                    <FormattedMessage id="home" />
+                </BreadcrumbItem>
+                <BreadcrumbItem>
+                    <FormattedMessage id="documents" />
+                </BreadcrumbItem>
             </Breadcrumb>
             <div className="div-documentBrowser-text">
                 <FormattedMessage id="documentBrowser" />

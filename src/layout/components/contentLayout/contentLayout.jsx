@@ -3,9 +3,8 @@ import { Layout } from 'antd';
 import './contentLayout.css';
 import InputApp from '../../../components/inputApp/inputApp';
 import TableApp from '../../../components/tableApp/tableApp';
-import { FormattedMessage } from 'react-intl';
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content } = Layout;
 
 const ContentLayout = (props) => {
 
@@ -17,7 +16,6 @@ const ContentLayout = (props) => {
             <div className="div-tableApp">
                 <TableApp />
             </div>
-
         </Content>
     )
 }

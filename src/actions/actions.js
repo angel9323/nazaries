@@ -38,7 +38,7 @@ export const addDocument = (nameDoc) => (dispatch, getState) => {
     const filters = getState().tableReducer.filters;
     const allDocuments = getState().tableReducer.allDocuments;
     let filteredDocuments;
-    if (filters.length == 0) {
+    if (filters.length === 0) {
         filteredDocuments = [...allDocuments];
     } else {
         filteredDocuments = allDocuments.filter(doc => filters.includes(doc.status));
@@ -57,7 +57,7 @@ export const filterDocuments = (filter, addFilter) => (dispatch, getState) => {
     if (addFilter) {
         newFilters = [...filters, filter];
     } else {
-        newFilters = filters.filter(element => element != filter);
+        newFilters = filters.filter(element => element !== filter);
     }
 
     dispatch({
@@ -68,7 +68,7 @@ export const filterDocuments = (filter, addFilter) => (dispatch, getState) => {
     //filtering the documents
     const allDocuments = getState().tableReducer.allDocuments;
     let filteredDocuments;
-    if (newFilters.length == 0) {
+    if (newFilters.length === 0) {
         filteredDocuments = [...allDocuments];
     } else {
         filteredDocuments = allDocuments.filter(doc => newFilters.includes(doc.status));

@@ -11,7 +11,7 @@ const CheckboxApp = (props) => {
 
     //in case we clicked the reset button
     useEffect(() => {
-        if (props.filters.length == 0) {
+        if (props.filters.length === 0) {
             setChecked(false);
         }
     }, [props.filters])

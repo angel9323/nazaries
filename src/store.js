@@ -1,4 +1,4 @@
-import { combineReducers, createStore, compose, applyMiddleware } from "redux";
+import { combineReducers, createStore, applyMiddleware } from "redux";
 import ResuxThunk from 'redux-thunk';
 import tableReducer from './reducers/tableReducer';
 

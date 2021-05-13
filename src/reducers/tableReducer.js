@@ -1,4 +1,4 @@
-import { data } from './mockedData';
+// import { data } from './mockedData';
 import { actionTypes } from '../actions/actions';
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
     filters: [],
 }
 
-export default (state = initialState, action) => {
+const tableReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ADD_DOCUMENT: {
             return {
@@ -44,3 +44,5 @@ export default (state = initialState, action) => {
         default: return state
     }
 }
+
+export default tableReducer;

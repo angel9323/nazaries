@@ -3,15 +3,14 @@ import { connect } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import './tableApp.css';
 import { FormattedMessage } from 'react-intl';
-import { Table, Dropdown, Button, Menu, Pagination } from 'antd';
+import { Table, Button } from 'antd';
 import { resetFilters, setDataDB } from '../../actions/actions';
 import { DownOutlined } from '@ant-design/icons';
 
 const TableApp = (props) => {
 
-    const [sortedInfo, setSortedInfor] = useState({});
     const dispatch = useDispatch();
-    const pagTest = <Pagination pageSize={4} showTotal={(total, range) => `${range[0]}-${range[1]} of ${total} items`} />
+    const [sortedInfo, setSortedInfor] = useState({});
     const pagination = {
         pageSize: 4,
         showTotal: (total, range) => (`${range[0]}-${range[1]} of ${total} documents`)
@@ -23,7 +22,8 @@ const TableApp = (props) => {
             .then(response => response.json()
             ).then(data => {
                 dispatch(setDataDB(data))
-            });
+            })
+            .catch(err => console.log(err))
     }, [])
 
 

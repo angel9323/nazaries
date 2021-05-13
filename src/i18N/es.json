@@ -19,5 +19,7 @@
     "dateModified": "Fecha modificación",
     "type": "Tipo",
     "dashboard": "Dashboard",
-    "reset": "Resetear"
+    "reset": "Resetear",
+    "home": "Home",
+    "documents": "Documentos"
 }
